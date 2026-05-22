@@ -19,6 +19,14 @@
     "deploy:pages": "npm run build:pages && wrangler pages deploy .vercel/output/static --branch main"
   },
   "type": "module",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "workerd",
+      "sharp",
+      "bun"
+    ]
+  },
   "dependencies": {
     "@auth/drizzle-adapter": "^1.7.4",
     "@cloudflare/next-on-pages": "^1.13.6",
